@@ -8,7 +8,7 @@ class RestaurantServiceTest {
     Restaurant restaurant;
    
 
-    //REFACTOR ALL THE REPEATED LINES OF CODE
+    //REFACTORING ALL THE REPEATED LINES OF CODE
     @BeforeEach
     public void createRestaurant(){
         LocalTime openingTime = LocalTime.parse("10:30:00");

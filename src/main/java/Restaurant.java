@@ -19,7 +19,7 @@ public class Restaurant {
 
     public boolean isRestaurantOpen() {
 
-        // if current time is between Opening and Closing Time
+        // check if current time is between Opening and Closing Time
 
         if (getCurrentTime().isAfter(this.openingTime) && getCurrentTime().isBefore(this.closingTime)) {
             return true;
