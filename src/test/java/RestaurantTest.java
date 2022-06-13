@@ -88,7 +88,7 @@ class RestaurantTest {
 //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     //<<<<<<<<<<<<<<<<<<<<<<<Total Order>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-//Added failing  test case for implementing feature for calculating order value
+//Added failing  test case for implementing feature for calculating order value ,implemented the method and tested
     @Test
     public void selecting_item_from_menu_should_return_order_cost() {
         int orderTotal;

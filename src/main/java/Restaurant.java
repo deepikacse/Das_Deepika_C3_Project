@@ -37,6 +37,7 @@ public class Restaurant {
     public List<Item> getMenu() {
         return menu;
     }
+
     private Item findItemByName(String itemName) {
         for (Item item : menu) {
             if (item.getName().equals(itemName))
@@ -71,6 +72,16 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+//implementation of feature calculating order value in TDD approach
+    public int calculateOrderTotal(List<String> selectedItems) {
+        int orderTotal  = 0;
+        for (String itemName  : selectedItems ) {
+            orderTotal = orderTotal+ findItemByName(itemName).getPrice();
+        }
+        return orderTotal;
+    }
+
 }
 
 
