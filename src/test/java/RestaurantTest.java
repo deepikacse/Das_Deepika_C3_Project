@@ -2,6 +2,9 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import java.time.LocalTime;
+import java.util.Arrays;
+import java.util.List;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -51,7 +54,6 @@ class RestaurantTest {
         assertFalse(spyRestaurant.isRestaurantOpen());
 
 
-
     }
 
 
@@ -81,6 +83,18 @@ class RestaurantTest {
         assertThrows(itemNotFoundException.class,
                 () -> restaurant.removeFromMenu("French fries"));
     }
-}
+
 
 //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //<<<<<<<<<<<<<<<<<<<<<<<Total Order>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+//Added failing  test case for implementing feature for calculating order value
+    @Test
+    public void selecting_item_from_menu_should_return_order_cost() {
+        int orderTotal;
+        List<String> selectedItems = Arrays.asList("Sweet corn soup", "Vegetable lasagne");
+        orderTotal = restaurant.calculateOrderTotal(selectedItems);
+        assertEquals(orderTotal,388);
+    }
+}
+//<<<<<<<<<<<<<<<<<<<<<<<Total Order>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
